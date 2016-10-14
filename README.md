@@ -1,19 +1,19 @@
-# Kahlan DxMatchers
+# Kahlan ExtraMatcher
 
-[![Build Status](https://travis-ci.org/kahlan/DxMatchers.svg)](https://travis-ci.org/kahlan/DxMatchers)
+[![Build Status](https://travis-ci.org/kahlan/extra-matcher.svg)](https://travis-ci.org/kahlan/extra-matcher)
 
 Installation
 ------------
 
 ```sh
-composer install kahlan/dxmatchers
+composer install kahlan/extra-matcher
 ```
 
 Bootstrap
 ---------
 
 ```php
-use Kahlan\DxMatchers\ToBeOneOf;
+use Kahlan\ExtraMatcher\ToBeOneOf;
 
 Kahlan\Matcher::register('toBeOneOf', ToBeOneOf::class);
 ```
