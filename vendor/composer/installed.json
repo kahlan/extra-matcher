@@ -1,0 +1,59 @@
+[
+    {
+        "name": "kahlan/kahlan",
+        "version": "3.0.1",
+        "version_normalized": "3.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kahlan/kahlan.git",
+            "reference": "6af9ba4c061c27a47d05a2de446235763664fda0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kahlan/kahlan/zipball/6af9ba4c061c27a47d05a2de446235763664fda0",
+            "reference": "6af9ba4c061c27a47d05a2de446235763664fda0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "require-dev": {
+            "squizlabs/php_codesniffer": "^2.7"
+        },
+        "time": "2016-10-07 12:41:07",
+        "bin": [
+            "bin/kahlan"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Kahlan\\": "src/"
+            },
+            "files": [
+                "src/init.php",
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "CrysaLEAD"
+            }
+        ],
+        "description": "The PHP Test Framework for Freedom, Truth and Justice.",
+        "keywords": [
+            "BDD",
+            "Behavior-Driven Development",
+            "Monkey Patching",
+            "TDD",
+            "mock",
+            "stub",
+            "testing",
+            "unit test"
+        ]
+    }
+]

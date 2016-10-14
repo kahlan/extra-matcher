@@ -1,0 +1,74 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "730094fe56d59c4d09457da32f7fa4f0",
+    "content-hash": "a58a96256aa8d5414abcec2b1e3d3c88",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "kahlan/kahlan",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kahlan/kahlan.git",
+                "reference": "6af9ba4c061c27a47d05a2de446235763664fda0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kahlan/kahlan/zipball/6af9ba4c061c27a47d05a2de446235763664fda0",
+                "reference": "6af9ba4c061c27a47d05a2de446235763664fda0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^2.7"
+            },
+            "bin": [
+                "bin/kahlan"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kahlan\\": "src/"
+                },
+                "files": [
+                    "src/init.php",
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CrysaLEAD"
+                }
+            ],
+            "description": "The PHP Test Framework for Freedom, Truth and Justice.",
+            "keywords": [
+                "BDD",
+                "Behavior-Driven Development",
+                "Monkey Patching",
+                "TDD",
+                "mock",
+                "stub",
+                "testing",
+                "unit test"
+            ],
+            "time": "2016-10-07 12:41:07"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

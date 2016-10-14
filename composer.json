@@ -1,0 +1,27 @@
+{
+    "name": "kahlan/extra-matcher",
+    "description": "Kahlan Matchers on DX.",
+    "keywords": ["matchers", "kahlan", "dx"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CrysaLEAD"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kahlan\\ExtraMatcher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kahlan\\ExtraMatcher\\Spec\\": "spec/"
+        }
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^3.0" 
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
