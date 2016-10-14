@@ -1,19 +1,32 @@
-# Kahlan ExtraMatcher
+# Kahlan Additionnal Matchers
 
-[![Build Status](https://travis-ci.org/kahlan/extra-matcher.svg)](https://travis-ci.org/kahlan/extra-matcher)
+[![Build Status](https://travis-ci.org/kahlan/extra-matcher.svg?branch=master)](https://travis-ci.org/kahlan/extra-matcher)
+[![Code Coverage](https://scrutinizer-ci.com/g/kahlan/resource/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kahlan/extra-matcher/)
 
-Installation
-------------
+**Warning some of these matchers are experimentals and may be changed at any time**
 
-```sh
-composer install kahlan/extra-matcher
+## Installation
+
+### via Composer
+
+```bash
+$ composer require --dev kahlan/extra-matcher
 ```
 
-Bootstrap
----------
+## Registration
 
 ```php
-use Kahlan\ExtraMatcher\ToBeOneOf;
+use Kahlan\Matcher;
 
-Kahlan\Matcher::register('toBeOneOf', ToBeOneOf::class);
+Matcher::register('toBeOneOf', 'Kahlan\Extra\Matcher\ToBeOneOf');
+```
+
+## Documentation
+
+**toBeOneOf($expected)**
+
+```php
+it("passes if $actual is present in $expected", function() {
+    expect(3)->toBeOneOf([1, 2, 3]);
+});
 ```

@@ -1,5 +1,5 @@
 <?php
-namespace Kahlan\ExtraMatcher;
+namespace Kahlan\Extra\Matcher;
 
 use Kahlan\Matcher\ToContain;
 

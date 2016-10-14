@@ -1,25 +1,36 @@
+sudo: required
+dist: xenial
+group: edge
 language: php
 
 php:
-  - 5.4        
+  - 5.4
   - 5.5
   - 5.6
-  - 7
+  - 7.0
   - 7.1
-
-before_script:
-  - composer self-update
-  - composer install --prefer-source --no-interaction
-  - composer dump-autoload -o
-
-script:
-  - bin/kahlan --coverage=4 --reporter=verbose
-
-notifications:
-  email: false
+  - hhvm
 
 matrix:
   fast_finish: true
   allow_failures:
-    - php: 7
-    - php: 7.1
+    - php: hhvm
+
+before_script:
+  - if [[ $TRAVIS_SECURE_ENV_VARS = "true" ]]; then composer config -g github-oauth.github.com $GITHUB_COMPOSER_AUTH; fi
+  - composer self-update
+  - composer install --no-interaction
+  - if [[ $TRAVIS_PHP_VERSION =~ ^hhvm ]]; then echo 'hhvm.php7.all = 1' >> /etc/hhvm/php.ini; fi
+  - if [[ $TRAVIS_PHP_VERSION =~ ^7 ]]; then git clone git://github.com/xdebug/xdebug.git && cd xdebug && phpize && ./configure --enable-xdebug  && make && make install && echo "zend_extension = xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini && cd ..; fi
+
+script:
+  - bin/phpcs
+  - bin/kahlan --config=kahlan-config.travis.php --clover=clover.xml
+
+after_success:
+  - "if [ $(phpenv version-name) = '7.0' ]; then wget https://scrutinizer-ci.com/ocular.phar; fi"
+  - "if [ $(phpenv version-name) = '7.0' ]; then php ocular.phar code-coverage:upload --format=php-clover 'clover.xml'; fi"
+
+env:
+  global:
+    - secure: iqNia6xfybP9p2fwc2jWJTtPJym1xpAPbc8ceBn77a4qhbb9IW+8c0MTmdA57p385rn7ZqFts9e110Jszbh+pgDRriThlS4THLZJloVodlsEktFUbApaKHLQwd4f4EUE1dJ653C22cX19FDfT7eTCLjaVl5M6CsDuuTK17jbyyhk54Wt1Tzo+DD2VjPGuCtsbNd8FslR6qQJMnvnfYj/rBdoolYeNkh4obkrRQ/l35c/DyOiggW9OZE7NNtQGT0goEfH9YtNI8CfBjIS2GjsRGtUk+71lRFpXyPzKJKSI/C4GInzRovkuPAJWxhP7hh18jPVuYWzVsLkQBBMxpi070ce/FXPLHndyPPud7usio31bAKsC8odl2hd9H/veX/buIzQ24MYGbeUbB4+loDE1g3O8hVSQgVblaSPD+QIdDynyVXLlWka42clK5X+TKDgSUfMaKP/de1SfRSFY2JTGLXVoKPAnPMhD0uadE3ZAQxuehtQoPMUJ3AInSJQoDiziEIkwu4/VCkwKH6bgW5DsMhRqR98U9gjcNTaPex3TlVL7e7ZunqA1xpVw72/nRGfpAbI/EH/1M2oQbJrEdyqBwL8YrDc3VlRO5e/Rv/0exefD3mbG22TbWIYKnS9rk4s13GXsglnSI78nrmeDFP3gOR5km92qoK43VHJXnrqY7s=
