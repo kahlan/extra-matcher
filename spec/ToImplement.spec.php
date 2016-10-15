@@ -8,7 +8,7 @@ describe('ToImplement', function () {
     describe('::match()', function () {
         it('passes if $actual is implements of $expected', function () {
             $actual = new Bar();
-            $expeted = 'Foo';
+            $expeted = 'Kahlan\Extra\Matcher\Spec\Foo';
 
             expect($actual)->toImplement($expeted);
         });
