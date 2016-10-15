@@ -17,9 +17,15 @@ $ composer require --dev kahlan/extra-matcher
 
 ## Registration
 
+To manualy register the matchers you want, add them in your `kahlan-config.php` config file like in the following example:
+
 ```php
 // kahlan-config.php
-require_once 'vendor/kahlan/extra-matcher/kahlan-config.php';
+use Kahlan\Matcher;
+
+Matcher::register('toBeOneOf', 'Kahlan\Extra\Matcher\ToBeOneOf');
+Matcher::register('toEqualOneOf', 'Kahlan\Extra\Matcher\ToEqualOneOf');
+Matcher::register('toImplement', 'Kahlan\Matcher\ToBeAnInstanceOf'); // Alias
 ```
 
 ## Documentation
