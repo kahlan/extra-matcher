@@ -3,14 +3,15 @@ namespace Kahlan\Extra\Matcher;
 
 use Traversable;
 
-class ToBeOneOf
+class ToEqualOneOf
 {
     /**
-     * Checks that `$expected` has value of `$actual` ( strict ).
+     * Checks that `$expected` has value of `$actual` ( loose ).
      *
-     * @param  mixed   $actual   The actual value.
-     * @param  mixed   $expected The expected value.
-     * @return boolean
+     * @param mixed $actual   The actual value
+     * @param mixed $expected The expected value
+     *
+     * @return bool
      */
     public static function match($actual, $expected)
     {
@@ -28,10 +29,10 @@ class ToBeOneOf
     /**
      * Returns the description message.
      *
-     * @return string The description message.
+     * @return string The description message
      */
     public static function description()
     {
-        return "be part of the expected values.";
+        return 'be part of the expected values.';
     }
 }
