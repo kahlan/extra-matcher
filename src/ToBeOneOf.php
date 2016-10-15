@@ -1,12 +1,12 @@
 <?php
 namespace Kahlan\Extra\Matcher;
 
-use Kahlan\Matcher\ToContain;
+use Traversable;
 
 class ToBeOneOf
 {
     /**
-     * Checks that `$expected` has value of `$actual`.
+     * Checks that `$expected` has value of `$actual` ( identic ).
      *
      * @param  mixed   $actual   The actual value.
      * @param  mixed   $expected The expected value.
@@ -14,7 +14,15 @@ class ToBeOneOf
      */
     public static function match($actual, $expected)
     {
-        return ToContain::match($expected, $actual);
+        if (is_array($expected) || $expected instanceof Traversable) {
+            foreach ($expected as $key => $value) {
+                if ($value == $actual) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     /**
