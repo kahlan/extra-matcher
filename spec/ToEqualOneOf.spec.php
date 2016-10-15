@@ -10,6 +10,7 @@ describe('ToEqualOneOf', function () {
         it('passes if actual is part of the expected values', function () {
 
             expect('1')->toEqualOneOf([1, 2, 3]);
+            expect(1)->toEqualOneOf([1, 2, 3]);
 
         });
 
