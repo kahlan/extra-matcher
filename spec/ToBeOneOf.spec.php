@@ -18,6 +18,13 @@ describe('ToBeOneOf', function () {
             expect(0)->not->toBeOneOf([1, 2, 3]);
 
         });
+
+        it('fails if actual is not strictly part of the expected values', function () {
+
+            expect('1')->not->toBeOneOf([1, 2, 3]);
+
+        });
+
     });
 
     describe('::description()', function () {
