@@ -24,7 +24,7 @@ require_once 'vendor/kahlan/extra-matcher/kahlan-config.php';
 
 ## Documentation
 
-**toBeOneOf($expected)** // identic comparation
+**toBeOneOf($expected)** // strict comparation
 
 ```php
 it("passes if $actual is present in $expected", function() {
@@ -32,7 +32,7 @@ it("passes if $actual is present in $expected", function() {
 });
 ```
 
-**toEqualOneOf($expected)** // non-identic comparation
+**toEqualOneOf($expected)** // loose comparation
 
 ```php
 it("passes if $actual is present in $expected", function() {

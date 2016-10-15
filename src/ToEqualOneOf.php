@@ -6,7 +6,7 @@ use Traversable;
 class ToEqualOneOf
 {
     /**
-     * Checks that `$expected` has value of `$actual` ( non-identic ).
+     * Checks that `$expected` has value of `$actual` ( loose ).
      *
      * @param mixed $actual   The actual value
      * @param mixed $expected The expected value

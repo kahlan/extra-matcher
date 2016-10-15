@@ -6,7 +6,7 @@ use Traversable;
 class ToBeOneOf
 {
     /**
-     * Checks that `$expected` has value of `$actual` ( identic ).
+     * Checks that `$expected` has value of `$actual` ( strict ).
      *
      * @param  mixed   $actual   The actual value.
      * @param  mixed   $expected The expected value.
