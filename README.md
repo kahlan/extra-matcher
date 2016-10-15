@@ -28,6 +28,12 @@ Matcher::register('toEqualOneOf', 'Kahlan\Extra\Matcher\ToEqualOneOf');
 Matcher::register('toImplement', 'Kahlan\Matcher\ToBeAnInstanceOf'); // Alias
 ```
 
+Or in case you want to register all matchers, you can write:
+
+```php
+require_once 'vendor/kahlan/extra-matcher/kahlan-config.php';
+```
+
 ## Documentation
 
 **toBeOneOf($expected)** // strict comparison
@@ -43,5 +49,18 @@ it("passes if $actual is present in $expected", function() {
 ```php
 it("passes if $actual is present in $expected", function() {
     expect("3")->toEqualOneOf([1, 2, 3]);
+});
+```
+
+**toImplement($expected)** // object implements expected interface 
+
+```php
+it("passes if $actual implements $expected", function() {
+    
+    interface foo { }
+    class bar implements foo {}
+    
+    $actual = new bar(); 
+    expect($actual)->toImplement('foo');
 });
 ```
