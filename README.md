@@ -18,6 +18,7 @@ $ composer require --dev kahlan/extra-matcher
 ## Registration
 
 ```php
+// kahlan-config.php
 use Kahlan\Matcher;
 
 Matcher::register('toBeOneOf', 'Kahlan\Extra\Matcher\ToBeOneOf');
