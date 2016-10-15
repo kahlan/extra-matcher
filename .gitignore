@@ -2,11 +2,6 @@
 composer.lock
 composer.phar
 vendor
-<<<<<<< ef120b97c590765098eb590d9e6bd199e8b99dff
-bin
-composer.lock
-=======
 codeclimate.json
 coveralls.json
 clover.xml
->>>>>>> Some minor refactoring.
