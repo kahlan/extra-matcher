@@ -13,6 +13,8 @@
 $ composer require --dev kahlan/extra-matcher
 ```
 
+> make sure you have "minimum-stability": "dev" in your composer.json
+
 ## Registration
 
 ```php
