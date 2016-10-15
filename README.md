@@ -55,12 +55,14 @@ it("passes if $actual is present in $expected", function() {
 **toImplement($expected)** // object implements expected interface 
 
 ```php
+namespace App\Spec;
+
 it("passes if $actual implements $expected", function() {
     
-    interface foo { }
-    class bar implements foo {}
+    interface Foo { }
+    class bar implements Foo {}
     
-    $actual = new bar(); 
-    expect($actual)->toImplement('foo');
+    $actual = new Bar(); 
+    expect($actual)->toImplement('App\Spec\Foo');
 });
 ```
