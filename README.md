@@ -36,6 +36,6 @@ it("passes if $actual is present in $expected", function() {
 
 ```php
 it("passes if $actual is present in $expected", function() {
-    expect("3")->toBeOneOf([1, 2, 3]);
+    expect("3")->toEqualOneOf([1, 2, 3]);
 });
 ```
