@@ -16,7 +16,7 @@ class ToBeOneOf
     {
         if (is_array($expected) || $expected instanceof Traversable) {
             foreach ($expected as $key => $value) {
-                if ($value == $actual) {
+                if ($value === $actual) {
                     return true;
                 }
             }
