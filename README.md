@@ -24,10 +24,18 @@ require_once 'vendor/kahlan/extra-matcher/kahlan-config.php';
 
 ## Documentation
 
-**toBeOneOf($expected)**
+**toBeOneOf($expected)** // identic comparation
 
 ```php
 it("passes if $actual is present in $expected", function() {
     expect(3)->toBeOneOf([1, 2, 3]);
+});
+```
+
+**toEqualOneOf($expected)** // non-identic comparation
+
+```php
+it("passes if $actual is present in $expected", function() {
+    expect("3")->toBeOneOf([1, 2, 3]);
 });
 ```
