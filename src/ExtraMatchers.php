@@ -6,7 +6,7 @@ use Kahlan\Matcher;
 
 class ExtraMatchers
 {
-    public function register($matchers = [])
+    public static function register($matchers = [])
     {
         $map = [
             'toBeOneOf'    => 'Kahlan\Extra\Matcher\ToBeOneOf',
