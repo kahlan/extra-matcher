@@ -11,9 +11,9 @@ describe('ToImplement', function () {
         it('passes if $actual is implements of $expected', function () {
 
             $actual = new Bar();
-            $expeted = 'Kahlan\Extra\Matcher\Spec\Fixture\Foo';
+            $expected = 'Kahlan\Extra\Matcher\Spec\Fixture\Foo';
 
-            expect($actual)->toImplement($expeted);
+            expect($actual)->toImplement($expected);
 
         });
 
