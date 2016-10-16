@@ -17,7 +17,7 @@ $ composer require --dev kahlan/extra-matcher
 
 ## Registration
 
-To manualy register the matchers you want, add them in your `kahlan-config.php` config file like in the following example:
+To manually register the matchers you want, add them in your `kahlan-config.php` config file like in the following example:
 
 ```php
 use Kahlan\Extra\Matcher\ExtraMatchers;
