@@ -1,4 +1,4 @@
 <?php
-use Kahlan\Extra\Matcher\ExtraMatcher;
+use Kahlan\Extra\Matcher\ExtraMatchers;
 
-ExtraMatcher::register();
+ExtraMatchers::register();

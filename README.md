@@ -20,17 +20,17 @@ $ composer require --dev kahlan/extra-matcher
 To manualy register the matchers you want, add them in your `kahlan-config.php` config file like in the following example:
 
 ```php
-use Kahlan\Extra\Matcher\ExtraMatcher;
+use Kahlan\Extra\Matcher\ExtraMatchers;
 
-ExtraMatcher::register(['toBeOneOf', ...]);
+ExtraMatchers::register(['toBeOneOf', ...]);
 ```
 
 Or in case you want to register all matchers, you can simply write:
 
 ```php
-use Kahlan\Extra\Matcher\ExtraMatcher;
+use Kahlan\Extra\Matcher\ExtraMatchers;
 
-ExtraMatcher::register();
+ExtraMatchers::register();
 ```
 
 ## Documentation

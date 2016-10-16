@@ -4,9 +4,9 @@ namespace Kahlan\Extra\Matcher;
 use Exception;
 use Kahlan\Matcher;
 
-class ExtraMatcher
+class ExtraMatchers
 {
-    public static function register($matchers = [])
+    public function register($matchers = [])
     {
         $map = [
             'toBeOneOf'    => 'Kahlan\Extra\Matcher\ToBeOneOf',

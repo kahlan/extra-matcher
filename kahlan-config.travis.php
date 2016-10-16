@@ -1,7 +1,7 @@
 <?php
-use Kahlan\Extra\Matcher\ExtraMatcher;
+use Kahlan\Extra\Matcher\ExtraMatchers;
 
 $commandLine = $this->commandLine();
 $commandLine->option('coverage', 'default', 3);
 
-ExtraMatcher::register();
+ExtraMatchers::register();
