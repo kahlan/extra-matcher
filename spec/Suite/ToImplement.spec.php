@@ -1,8 +1,8 @@
 <?php
-
-namespace Kahlan\Extra\Matcher\Spec;
+namespace Kahlan\Extra\Matcher\Spec\Suite;
 
 use stdClass;
+use Kahlan\Extra\Matcher\Spec\Fixture\Bar;
 
 describe('ToImplement', function () {
 
@@ -11,7 +11,7 @@ describe('ToImplement', function () {
         it('passes if $actual is implements of $expected', function () {
 
             $actual = new Bar();
-            $expeted = 'Kahlan\Extra\Matcher\Spec\Foo';
+            $expeted = 'Kahlan\Extra\Matcher\Spec\Fixture\Foo';
 
             expect($actual)->toImplement($expeted);
 

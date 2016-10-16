@@ -1,5 +1,5 @@
 <?php
-namespace Kahlan\Extra\Matcher\Spec;
+namespace Kahlan\Extra\Matcher\Spec\Suite;
 
 use Exception;
 use Kahlan\Extra\Matcher\ExtraMatchers;
