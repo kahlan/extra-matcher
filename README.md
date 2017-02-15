@@ -64,7 +64,7 @@ namespace App\Spec;
 it("passes if $actual implements $expected", function() {
 
     interface Foo { }
-    class bar implements Foo {}
+    class Bar implements Foo {}
 
     $actual = new Bar();
     expect($actual)->toImplement('App\Spec\Foo');
