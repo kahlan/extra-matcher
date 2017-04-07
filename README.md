@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.org/kahlan/extra-matcher.svg?branch=master)](https://travis-ci.org/kahlan/extra-matcher)
 [![Code Coverage](https://scrutinizer-ci.com/g/kahlan/extra-matcher/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kahlan/extra-matcher/?branch=master)
 
-**Warning some of these matchers are experimentals and may be changed at any time**
-
 ## Installation
 
 ### via Composer
@@ -12,13 +10,6 @@
 ```bash
 $ composer require --dev kahlan/extra-matcher
 ```
-
-> make sure you have:
-```
-"minimum-stability": "dev",
-"prefer-stable": true,
-```
->in your composer.json
 
 ## Registration
 
