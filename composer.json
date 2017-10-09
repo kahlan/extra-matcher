@@ -11,7 +11,7 @@
         "php": ">=5.4"
     },
     "require-dev": {
-        "kahlan/kahlan": "~3.0|4.0.x-dev",
+        "kahlan/kahlan": "~3.0|~4.0",
         "squizlabs/php_codesniffer": "~2.7"
     },
     "autoload": {
