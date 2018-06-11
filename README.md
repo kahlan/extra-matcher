@@ -1,4 +1,4 @@
-# Kahlan Additionnal Matchers
+# Kahlan Additional Matchers
 
 [![Build Status](https://travis-ci.org/kahlan/extra-matcher.svg?branch=master)](https://travis-ci.org/kahlan/extra-matcher)
 [![Code Coverage](https://scrutinizer-ci.com/g/kahlan/extra-matcher/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kahlan/extra-matcher/?branch=master)
